@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+
+    <button class="show-nav-btn"><i class="fas fa-bars"></i></button>
+    <header class="header">
+        <div class="header-container container">
+            <a href="" class="site-logo">LOGO</a>
+            <nav class="site-navbar">
+                <ul class="site-nav-list">
+                    <li class="list-item"><a class="list-item-link" href="">HOME</a></li>
+                    <li class="list-item"><a class="list-item-link" href="">ABOUT</a></li>
+                    <li class="list-item"><a class="list-item-link" href="">CONNECT</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <nav class="hidden-nav site-navbar">
+            <ul class="site-nav-list">
+                <li class="list-item"><a class="list-item-link" href="">HOME</a></li>
+                <li class="list-item"><a class="list-item-link" href="">ABOUT</a></li>
+                <li class="list-item"><a class="list-item-link" href="">CONNECT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <!-- MODAL SECTION -->
+        <div class="modal hidden">
+            <div class="modal-header">
+                <h2>Modal</h2>
+                <button id="modal-closer">X</button>
+            </div>
+            <div class="modal-body">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis ipsum ullam quibusdam. Eaque molestias illum cum excepturi nesciunt in alias molestiae dignissimos et, iste, totam dolorem, ex iusto id deserunt non vero ullam nihil pariatur. Quo ut tempore atque dolorem praesentium repellendus distinctio cumque impedit molestias?  
+            </div>
+        </div>
+        <div class="overlay hidden"></div>
+
+        <!-- FORM SECTION    -->
+        <h1>Todo List</h1>
+
+        <form class="todo-form" action="">
+            <input class="input-text" type="text">
+            <button>
+                <i class="fas fa-plus-square"></i>
+            </button>
+        </form>
+
+        <ul class="todos">
+        </ul>
+    </main>
+    
+    <script src="./app.js"></script>
+</body>
+</html>
