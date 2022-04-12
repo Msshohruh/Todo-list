@@ -44,6 +44,9 @@ if (e.code == 'Escape') {
 const inputText = document.querySelector('.input-text')
 const todos = document.querySelector('.todos')
 const todoForm = document.querySelector('.todo-form')
+const liCount = document.querySelector(".todo-items-count")
+const liSelectedCount = document.querySelector('.selected-items')
+let listCount = 0
 
 
 todoForm.addEventListener('submit', (e) => {
@@ -83,13 +86,19 @@ function addList(todo){
     // add li to ul
     todos.style.padding = '10px'
     todos.appendChild(li)
-
+    listCount++
+    liCount.textContent = listCount
     // buttons actions
     checkBtn.addEventListener('click', () => {
-        li.style.textDecoration = 'line-through'
+        li.classList.toggle('select-item')
+        liSelectedCount.textContent = document.querySelectorAll('.select-item').length
     })   
     trashBtn.addEventListener('click', () => {
         li.remove()
+        listCount -= 1
+        liCount.textContent = listCount
+        liSelectedCount.textContent = document.querySelectorAll('.select-item').length
+
         const list = document.querySelectorAll('.todo-item')
         if (list.length == '0') {
             modal.classList.remove('hidden')
